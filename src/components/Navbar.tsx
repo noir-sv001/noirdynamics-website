@@ -1,14 +1,14 @@
 const navItems = [
-  { label: "Development", href: "#development" },
-  { label: "Tooling", href: "#tooling" },
-  { label: "Systems", href: "#systems" },
-  { label: "Industrialization", href: "#industrialization" },
+  { label: "Process", href: "#process" },
+  { label: "Product Development", href: "#development" },
+  { label: "Engineering", href: "#tooling" },
+  { label: "Deployment", href: "#industrialization" },
   { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   return (
-    <header className="mx-auto mt-10 flex h-[72px] w-[calc(100%-40px)] max-w-[1440px] items-center justify-between border border-white/10 bg-white/[0.02] px-8 backdrop-blur-xl">
+    <header className="relative z-20 mx-auto mt-10 flex h-[72px] w-[calc(100%-40px)] max-w-[1440px] items-center justify-between border border-white/10 bg-white/[0.02] px-8 backdrop-blur-xl">
       <a
         href="/"
         className="text-[18px] font-semibold tracking-[0.14em]"
@@ -21,14 +21,17 @@ export default function Navbar() {
           <a
             key={item.label}
             href={item.href}
-            className="text-[13px] uppercase tracking-[0.12em] text-white/45 transition-all duration-300 hover:text-white"
+            className="text-[12px] uppercase tracking-[0.16em] text-white/45 transition-all duration-300 hover:text-white"
           >
             {item.label}
           </a>
         ))}
       </nav>
 
-      <div className="h-[12px] w-[12px] rounded-full border border-white/20 bg-white/[0.06]" />
+      <div className="flex items-center gap-3">
+        <div className="h-[8px] w-[8px] rounded-full bg-white/70" />
+        <div className="h-[8px] w-[8px] rounded-full border border-white/20 bg-white/[0.04]" />
+      </div>
     </header>
   );
 }

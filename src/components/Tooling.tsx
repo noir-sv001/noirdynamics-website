@@ -1,19 +1,19 @@
 const toolingAreas = [
   {
+    title: "Engineering Integration",
+    text: "Technical development and system integration for complex plastic, metal and electronic assemblies.",
+  },
+  {
     title: "Tooling Design",
-    text: "Development of advanced tooling concepts for scalable and process-stable industrial manufacturing.",
+    text: "Production-focused tooling concepts and mold design strategies for reliable industrial manufacturing.",
   },
   {
     title: "Injection Molding Systems",
-    text: "Engineering of production-oriented plastic systems with integrated tooling and manufacturing logic.",
+    text: "Engineering of plastic components and assemblies with deep understanding of injection molding processes and tooling constraints.",
   },
   {
-    title: "Industrial Feasibility",
-    text: "Optimization of components and assemblies for efficient production, durability and repeatability.",
-  },
-  {
-    title: "Global Manufacturing Access",
-    text: "Integrated access to international tooling and manufacturing networks across Europe, Asia and North America.",
+    title: "Manufacturing Access",
+    text: "International manufacturing access across Europe, Asia and North America for tooling, injection molding and industrial production.",
   },
 ];
 
@@ -28,10 +28,10 @@ export default function Tooling() {
           {toolingAreas.map((item) => (
             <article
               key={item.title}
-              className="border-b border-white/10 p-8 md:border-r md:p-14"
+              className="group border-b border-white/10 p-8 transition-all duration-500 hover:bg-white/[0.02] md:border-r md:p-14"
             >
               <div className="mb-10 flex items-center gap-4">
-                <div className="h-[14px] w-[14px] rounded-full border border-white/20 bg-white/[0.04]" />
+                <div className="h-[14px] w-[14px] rounded-full border border-white/20 bg-white/[0.04] transition-all duration-500 group-hover:scale-[1.4] group-hover:bg-white/[0.14]" />
                 <div className="h-px flex-1 bg-white/10" />
               </div>
 
@@ -48,21 +48,21 @@ export default function Tooling() {
 
         <div className="border-t border-white/10 p-8 md:border-l md:border-t-0 md:p-16">
           <p className="text-[12px] uppercase tracking-[0.18em] text-white/35">
-            Tooling & Industrialization
+            Engineering & Manufacturing
           </p>
 
           <h2 className="mt-8 text-[42px] font-semibold leading-[1.04] tracking-[-0.035em] md:text-[72px]">
-            Production-Oriented
-            <br />
-            System
-            <br />
             Engineering
+            <br />
+            systems for
+            <br />
+            scalable production.
           </h2>
 
-          <p className="mt-10 max-w-[420px] text-[16px] leading-[1.8] text-white/55">
-            NOIR DYNAMICS combines product development, tooling systems and
-            industrial manufacturing logic to create scalable and production-ready
-            industrial solutions.
+          <p className="mt-10 max-w-[440px] text-[16px] leading-[1.8] text-white/55">
+            NOIR DYNAMICS connects engineering, tooling design and industrial
+            manufacturing logic to transform validated product concepts into
+            production-ready systems.
           </p>
         </div>
       </div>

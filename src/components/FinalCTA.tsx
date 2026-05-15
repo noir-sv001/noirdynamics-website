@@ -10,13 +10,15 @@ export default function FinalCTA() {
         </p>
 
         <h2 className="mt-8 max-w-[980px] text-[48px] font-semibold leading-[1.02] tracking-[-0.04em] md:text-[88px]">
-          Developing systems for industrial reality.
+          Developing industrial systems
+          <br />
+          from idea to impact.
         </h2>
 
-        <p className="mt-12 max-w-[620px] text-[17px] leading-[1.75] text-white/55">
-          NOIR DYNAMICS partners with companies to develop, engineer and
-          industrialize product systems from early concepts to market-ready
-          deployment.
+        <p className="mt-12 max-w-[680px] text-[17px] leading-[1.75] text-white/55">
+          NOIR DYNAMICS partners with companies to research, develop,
+          engineer, industrialize and deploy products built for real-world
+          performance and scalable production.
         </p>
 
         <a
