@@ -25,36 +25,40 @@ export default function Hero() {
           <div className="mt-16 flex flex-wrap gap-4">
             <a
               href="#process"
-              className="flex h-[56px] items-center justify-center border border-white/15 bg-white px-8 text-[14px] font-medium uppercase tracking-[0.08em] text-black transition-all duration-300 hover:scale-[1.02]"
+              className="flex h-[56px] items-center justify-center border border-white/15 bg-white px-8 text-[14px] font-medium uppercase tracking-[0.08em] text-black transition-all duration-500 ease-out hover:scale-[1.015]"
             >
               Explore Process
             </a>
 
             <a
               href="#contact"
-              className="flex h-[56px] items-center justify-center border border-white/10 px-8 text-[14px] font-medium uppercase tracking-[0.08em] text-white/80 transition-all duration-300 hover:border-white/20 hover:bg-white/[0.03]"
+              className="flex h-[56px] items-center justify-center border border-white/10 px-8 text-[14px] font-medium uppercase tracking-[0.08em] text-white/80 transition-all duration-500 ease-out hover:border-white/20 hover:bg-white/[0.03]"
             >
               Start Development
             </a>
           </div>
         </div>
 
-        <div className="relative hidden border-l border-white/10 md:block">
+        <div className="relative hidden overflow-hidden border-l border-white/10 md:block">
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.02)_0%,rgba(255,255,255,0)_100%)]" />
 
-          <div className="absolute left-0 top-0 h-full w-full">
-            <div className="absolute left-0 top-[20%] h-px w-full bg-white/10" />
-            <div className="absolute left-0 top-[40%] h-px w-full bg-white/10" />
-            <div className="absolute left-0 top-[60%] h-px w-full bg-white/10" />
-            <div className="absolute left-0 top-[80%] h-px w-full bg-white/10" />
+          <div className="absolute inset-0">
+            <div className="absolute left-0 top-[20%] h-px w-full bg-white/[0.05]" />
+            <div className="absolute left-0 top-[40%] h-px w-full bg-white/[0.05]" />
+            <div className="absolute left-0 top-[60%] h-px w-full bg-white/[0.05]" />
+            <div className="absolute left-0 top-[80%] h-px w-full bg-white/[0.05]" />
 
-            <div className="absolute left-[20%] top-0 h-full w-px bg-white/10" />
-            <div className="absolute left-[40%] top-0 h-full w-px bg-white/10" />
-            <div className="absolute left-[60%] top-0 h-full w-px bg-white/10" />
-            <div className="absolute left-[80%] top-0 h-full w-px bg-white/10" />
+            <div className="absolute left-[20%] top-0 h-full w-px bg-white/[0.05]" />
+            <div className="absolute left-[40%] top-0 h-full w-px bg-white/[0.05]" />
+            <div className="absolute left-[60%] top-0 h-full w-px bg-white/[0.05]" />
+            <div className="absolute left-[80%] top-0 h-full w-px bg-white/[0.05]" />
           </div>
 
-          <div className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/[0.03] blur-[140px]" />
+          <div className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/[0.025] blur-[140px]" />
+
+          <div className="absolute left-1/2 top-1/2 h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.06]" />
+
+          <div className="absolute left-1/2 top-1/2 h-[120px] w-[120px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.08]" />
         </div>
       </div>
     </section>

@@ -51,7 +51,10 @@ const processSteps = [
 
 export default function ProcessFlow() {
   return (
-    <section id="process" className="relative z-10 mx-auto w-[calc(100%-40px)] max-w-[1440px] border-x border-t border-white/10">
+    <section
+      id="process"
+      className="relative z-10 mx-auto w-[calc(100%-40px)] max-w-[1440px] border-x border-t border-white/10"
+    >
       <div className="grid grid-cols-1 border-b border-white/10 md:grid-cols-[0.42fr_0.58fr]">
         <div className="p-8 md:p-16">
           <p className="text-[12px] uppercase tracking-[0.22em] text-white/35">
@@ -79,20 +82,20 @@ export default function ProcessFlow() {
         {processSteps.map((step, index) => (
           <article
             key={step.number}
-            className="group relative overflow-hidden border-b border-white/10 p-8 transition-all duration-500 hover:bg-white/[0.025] md:p-12"
+            className="group relative overflow-hidden border-b border-white/10 p-8 transition-all duration-700 ease-out hover:bg-white/[0.025] md:p-12"
           >
-            <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+            <div className="absolute inset-0 opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100">
               <div className="absolute left-[-20%] top-0 h-px w-[140%] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
               <div className="absolute bottom-0 left-[-20%] h-px w-[140%] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             </div>
 
             <div className="relative flex gap-7">
-              <div className="relative flex h-[84px] w-[84px] shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.025] text-[28px] text-white/80 transition-all duration-500 group-hover:border-white/35 group-hover:bg-white/[0.06]">
-                <div className="absolute inset-[-10px] rounded-full border border-white/[0.08] transition-all duration-700 group-hover:scale-110 group-hover:border-white/20" />
+              <div className="relative flex h-[84px] w-[84px] shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.025] text-[28px] text-white/80 transition-all duration-700 ease-out group-hover:border-white/35 group-hover:bg-white/[0.06]">
+                <div className="absolute inset-[-10px] rounded-full border border-white/[0.08] transition-all duration-700 ease-out group-hover:scale-110 group-hover:border-white/20" />
 
-                <div className="absolute inset-[-22px] rounded-full bg-white/[0.04] opacity-0 blur-2xl transition-all duration-700 group-hover:opacity-100" />
+                <div className="absolute inset-[-22px] rounded-full bg-white/[0.04] opacity-0 blur-2xl transition-all duration-700 ease-out group-hover:opacity-100" />
 
-                <div className="absolute h-[1px] w-[120px] translate-x-[74px] bg-gradient-to-r from-white/25 to-transparent opacity-40 transition-all duration-500 group-hover:opacity-80" />
+                <div className="absolute h-[1px] w-[120px] translate-x-[74px] bg-gradient-to-r from-white/20 to-transparent opacity-30 transition-all duration-700 ease-out group-hover:opacity-70" />
 
                 <span className="relative z-10">{step.icon}</span>
               </div>
