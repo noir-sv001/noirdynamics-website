@@ -21,15 +21,15 @@ export default function Commercialization() {
   return (
     <section
       id="industrialization"
-      className="mx-auto w-[calc(100%-40px)] max-w-[1440px] border-x border-t border-white/10"
+      className="mx-auto w-[calc(100%-24px)] max-w-[1440px] border-x border-t border-white/10 md:w-[calc(100%-40px)]"
     >
       <div className="grid grid-cols-1 md:grid-cols-[0.42fr_0.58fr]">
-        <div className="border-b border-white/10 p-8 md:border-b-0 md:border-r md:p-16">
-          <p className="text-[12px] uppercase tracking-[0.18em] text-white/35">
+        <div className="border-b border-white/10 p-6 py-12 md:border-b-0 md:border-r md:p-16">
+          <p className="text-[11px] uppercase tracking-[0.18em] text-white/35 md:text-[12px]">
             Market Deployment
           </p>
 
-          <h2 className="mt-8 text-[42px] font-semibold leading-[1.04] tracking-[-0.035em] md:text-[72px]">
+          <h2 className="mt-8 text-[38px] font-semibold leading-[1.04] tracking-[-0.035em] md:text-[72px]">
             From production
             <br />
             to market
@@ -37,7 +37,7 @@ export default function Commercialization() {
             systems.
           </h2>
 
-          <p className="mt-10 max-w-[440px] text-[16px] leading-[1.8] text-white/55">
+          <p className="mt-8 max-w-[440px] text-[15px] leading-[1.8] text-white/55 md:mt-10 md:text-[16px]">
             NOIR DYNAMICS supports the transition from industrialized product
             systems to digital sales structures, market positioning and scalable
             commercial deployment.
@@ -48,18 +48,18 @@ export default function Commercialization() {
           {areas.map((item) => (
             <article
               key={item.title}
-              className="group border-b border-white/10 p-8 transition-all duration-500 hover:bg-white/[0.02] md:border-r md:p-14"
+              className="group border-b border-white/10 p-6 transition-all duration-500 hover:bg-white/[0.02] md:border-r md:p-14"
             >
-              <div className="mb-10 flex items-center gap-4">
+              <div className="mb-8 flex items-center gap-4 md:mb-10">
                 <div className="h-[14px] w-[14px] rounded-full border border-white/20 bg-white/[0.04] transition-all duration-500 group-hover:scale-[1.4] group-hover:bg-white/[0.14]" />
                 <div className="h-px flex-1 bg-white/10" />
               </div>
 
-              <h3 className="text-[28px] font-medium tracking-[-0.03em]">
+              <h3 className="text-[25px] font-medium tracking-[-0.03em] md:text-[28px]">
                 {item.title}
               </h3>
 
-              <p className="mt-6 text-[16px] leading-[1.75] text-white/55">
+              <p className="mt-5 text-[15px] leading-[1.75] text-white/55 md:mt-6 md:text-[16px]">
                 {item.text}
               </p>
             </article>

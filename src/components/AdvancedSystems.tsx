@@ -21,15 +21,15 @@ export default function AdvancedSystems() {
   return (
     <section
       id="systems"
-      className="mx-auto w-[calc(100%-40px)] max-w-[1440px] border-x border-t border-white/10"
+      className="mx-auto w-[calc(100%-24px)] max-w-[1440px] border-x border-t border-white/10 md:w-[calc(100%-40px)]"
     >
-      <div className="border-b border-white/10 px-8 py-16 md:px-16 md:py-24">
-        <p className="text-[12px] uppercase tracking-[0.18em] text-white/35">
+      <div className="border-b border-white/10 px-6 py-12 md:px-16 md:py-24">
+        <p className="text-[11px] uppercase tracking-[0.18em] text-white/35 md:text-[12px]">
           Industrial Systems
         </p>
 
-        <div className="mt-8 grid grid-cols-1 gap-12 md:grid-cols-[0.55fr_0.45fr]">
-          <h2 className="text-[42px] font-semibold leading-[1.04] tracking-[-0.035em] md:text-[72px]">
+        <div className="mt-8 grid grid-cols-1 gap-10 md:grid-cols-[0.55fr_0.45fr] md:gap-12">
+          <h2 className="text-[38px] font-semibold leading-[1.04] tracking-[-0.035em] md:text-[72px]">
             Automation and
             <br />
             intelligence for
@@ -37,7 +37,7 @@ export default function AdvancedSystems() {
             industrial scale.
           </h2>
 
-          <p className="max-w-[520px] text-[16px] leading-[1.8] text-white/55">
+          <p className="max-w-[520px] text-[15px] leading-[1.8] text-white/55 md:text-[16px]">
             NOIR DYNAMICS develops automation, robotics and intelligent
             operational systems to support scalable manufacturing, process
             control and industrial growth.
@@ -49,19 +49,19 @@ export default function AdvancedSystems() {
         {systems.map((item) => (
           <article
             key={item.title}
-            className="group border-b border-white/10 p-8 transition-all duration-500 hover:bg-white/[0.02] md:border-r md:p-14"
+            className="group border-b border-white/10 p-6 transition-all duration-500 hover:bg-white/[0.02] md:border-r md:p-14"
           >
-            <div className="mb-12 flex items-center justify-between">
+            <div className="mb-10 flex items-center justify-between md:mb-12">
               <div className="h-[14px] w-[14px] rounded-full border border-white/20 bg-white/[0.04] transition-all duration-500 group-hover:scale-[1.4] group-hover:bg-white/[0.14]" />
 
-              <div className="h-px w-[120px] bg-white/10" />
+              <div className="h-px w-[90px] bg-white/10 md:w-[120px]" />
             </div>
 
-            <h3 className="text-[28px] font-medium tracking-[-0.03em]">
+            <h3 className="text-[25px] font-medium tracking-[-0.03em] md:text-[28px]">
               {item.title}
             </h3>
 
-            <p className="mt-6 max-w-[520px] text-[16px] leading-[1.75] text-white/55">
+            <p className="mt-5 max-w-[520px] text-[15px] leading-[1.75] text-white/55 md:mt-6 md:text-[16px]">
               {item.text}
             </p>
           </article>
