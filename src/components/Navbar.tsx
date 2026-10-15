@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 const navItems = [
@@ -16,12 +17,12 @@ export default function Navbar() {
   return (
     <>
       <header className="relative z-50 mx-auto mt-6 flex h-[72px] w-[calc(100%-24px)] max-w-[1440px] items-center justify-between border border-white/10 bg-white/[0.02] px-5 backdrop-blur-xl md:mt-10 md:w-[calc(100%-40px)] md:px-8">
-        <a
+        <Link
           href="/"
           className="text-[15px] font-semibold tracking-[0.14em] md:text-[18px]"
         >
           NOIR DYNAMICS
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-10 md:flex">
           {navItems.map((item) => (

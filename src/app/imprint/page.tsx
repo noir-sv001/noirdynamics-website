@@ -1,19 +1,20 @@
+import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
+import LegalTextContent from "@/legal/LegalTextContent";
+import { formatLegalTextDate, getLegalText } from "@/legal/legal-texts";
 
-export default function ImprintPage() {
-  return (
-    <LegalPage title="Imprint">
-      <div>
-        <h2 className="mb-4 text-[20px] font-medium text-white">
-          Company Information
-        </h2>
-        <p>Legal company information will be added before launch.</p>
-      </div>
+export const revalidate = 300;
+export const metadata: Metadata = {
+  title: "Imprint",
+  description: "Legal notice for NOIR DYNAMICS.",
+  alternates: { canonical: "/imprint", languages: { de: "/de/impressum", en: "/imprint" } },
+};
 
-      <div>
-        <h2 className="mb-4 text-[20px] font-medium text-white">Contact</h2>
-        <p>contact@noirgroup.eu</p>
-      </div>
-    </LegalPage>
-  );
+export default async function ImprintPage() {
+  const text = await getLegalText("impressum", "en");
+  if (text) {
+    return <LegalPage title={text.title} updated={formatLegalTextDate(text.receivedAt, "en")}><LegalTextContent html={text.html} /></LegalPage>;
+  }
+
+  return <LegalPage title="Imprint"><p>The current legal notice is temporarily unavailable. Please contact <a href="mailto:contact@noirgroup.eu">contact@noirgroup.eu</a>.</p></LegalPage>;
 }

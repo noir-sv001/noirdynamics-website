@@ -1,23 +1,20 @@
+import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
+import LegalTextContent from "@/legal/LegalTextContent";
+import { formatLegalTextDate, getLegalText } from "@/legal/legal-texts";
 
-export default function PrivacyPage() {
-  return (
-    <LegalPage title="Privacy">
-      <div>
-        <h2 className="mb-4 text-[20px] font-medium text-white">
-          Data Protection
-        </h2>
-        <p>
-          Privacy information will be added before launch. This page will
-          describe how NOIR DYNAMICS handles personal data, contact requests and
-          technical website data.
-        </p>
-      </div>
+export const revalidate = 300;
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Privacy information for NOIR DYNAMICS.",
+  alternates: { canonical: "/privacy", languages: { de: "/de/datenschutz", en: "/privacy" } },
+};
 
-      <div>
-        <h2 className="mb-4 text-[20px] font-medium text-white">Contact</h2>
-        <p>contact@noirgroup.eu</p>
-      </div>
-    </LegalPage>
-  );
+export default async function PrivacyPage() {
+  const text = await getLegalText("datenschutz", "en");
+  if (text) {
+    return <LegalPage title={text.title} updated={formatLegalTextDate(text.receivedAt, "en")}><LegalTextContent html={text.html} /></LegalPage>;
+  }
+
+  return <LegalPage title="Privacy Policy"><p>The current privacy policy is temporarily unavailable. Please contact <a href="mailto:contact@noirgroup.eu">contact@noirgroup.eu</a>.</p></LegalPage>;
 }
